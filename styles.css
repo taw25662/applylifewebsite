@@ -31,8 +31,7 @@ body {
 }
 
 .navbar li {
-    position: relative; /* For dropdown positioning */
-    margin: 0;
+    margin: 10px;
 }
 
 .navbar a {
@@ -40,32 +39,6 @@ body {
     color: white;
     font-size: 24px;
     font-weight: bold;
-}
-
-.dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: rgba(0, 0, 0, 0.8);
-    min-width: 200px;
-    z-index: 1;
-}
-
-.dropdown-content li {
-    padding: 12px 16px;
-}
-
-.dropdown-content li a {
-    color: white;
-    text-decoration: none;
-    display: block;
-}
-
-.dropdown-content li a:hover {
-    background-color: rgba(255, 255, 255, 0.2);
-}
-
-.dropdown:hover .dropdown-content {
-    display: block;
 }
 
 
