@@ -103,17 +103,17 @@ h1 {
 }
 
 .scrolling-text {
-    display: inline-block;
+    display: flex; /* Use flex to align the text spans horizontally */
     white-space: nowrap;
     animation: scroll 20s linear infinite;
 }
 
 @keyframes scroll {
     0% {
-        transform: translateX(100%);
+        transform: translateX(0); /* Start from the initial position */
     }
     100% {
-        transform: translateX(-100%);
+        transform: translateX(-50%); /* Move by half the width of the container to create an endless loop */
     }
 }
 
@@ -122,5 +122,3 @@ h1 {
     font-size: 20px; /* Adjust font size as needed */
     display: inline-block;
 }
-
-    
