@@ -1,0 +1,469 @@
+
+
+body, html {
+    margin: 0;
+    padding: 0;
+}
+
+body::-webkit-scrollbar {
+    display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+body {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+}
+
+#homepage {
+    position: relative;
+    background-image: url('background3.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    object-fit: cover;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.navbar {
+    position: relative;
+    top: 0;
+    width: 100vw;
+    background-color: transparent;
+    display: flex;
+    justify-content: center;
+    right: 0;
+    border-bottom: solid 1px white;
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.navbar li {
+    margin: 10px;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: white;
+    font-size: 2vw;
+    font-weight: bold;
+}
+
+.maintext {
+    font-family: 'Bodoni Moda SC';
+    font-weight: 200;
+    font-size: 18vw;
+    position: relative;
+    text-align: center;
+    justify-content: center;
+    top: 40%;
+    transform: translateY(-50%);
+    white-space: nowrap;
+    color: white;
+    margin: 0;
+    padding: 0;
+}
+
+.loading-bar {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 50px; /* Adjust the height to fit your text */
+    background-color: transparent; /* Background color of the bar */
+    border-top: solid 1px white;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    overflow: hidden; /* Hide overflow text */
+    display: flex;
+    align-items: center; /* Center text vertically */
+}
+
+.scrolling-text {
+    display: flex; /* Use flex to align the text spans horizontally */
+    white-space: nowrap;
+    animation: scroll 20s linear infinite;
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateX(0); /* Start from the initial position */
+    }
+    100% {
+        transform: translateX(-50%); /* Move by half the width of the container to create an endless loop */
+    }
+}
+
+.scrolling-text span {
+    color: white;
+    font-size: 20px; /* Adjust font size as needed */
+    display: inline-block;
+}
+
+.main-section {
+    position: relative;
+    height: auto;
+    width: 100vw;
+    background-color: white;
+    display: flex;
+    flex-direction: row;
+}
+
+.first-section {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between; /* Distribute space between elements */
+    width: 100vw;
+    background-color: white;
+}
+
+.title {
+    font-size: 50px;
+    font-family: 'Bodoni Moda SC';
+    margin-left: 10%;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0; /* Keep at the top of the viewport */
+    z-index: 1;
+    align-self: flex-start; /* Ensure it stays at the top within its flex container */
+}
+
+.text-section {
+    display: flex;
+    flex-direction: column;
+    width: 70%;  /* Align to the right */
+    margin-top: 0;
+}
+
+.text-container {
+    position: relative;
+    top: -17%;
+    left: 40%;
+}
+
+.section-text {
+    font-family: 'Roboto Condensed', sans-serif;
+    color: black;
+    font-size: 22px;
+    text-align: left;
+    margin: 5% 5% 5% 5%;
+}
+
+
+.bio-boxes {
+    background-color: transparent;
+    border: none;
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+    width: 50vw;
+    left: 0%;
+    transform: translateX(25%);
+}
+
+@media (max-width: 1002px) {
+    .bio-boxes {
+        display: none;
+    }
+}
+
+.top-row {
+    display: flex;
+    flex-direction: row;
+    height: 70vh;
+}
+
+.second-row {
+    display: flex;
+    flex-direction: row;
+    height: 70vh;
+}
+
+.box {
+    background-color: rgb(245, 245, 245);
+    border: none;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+    margin: 8px;
+    border-radius: 8px;
+    min-width: 400px;
+    transition: transform 0.3s ease, font-size 0.3s ease;
+}
+
+.box:hover {
+    cursor: pointer;
+}
+
+.top-section {
+    position: relative;
+    top: 0;
+    width: 100%;
+    height: 60%;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+}
+
+.section1 {
+    background-image: url('sectionphoto2.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.section2 {
+    background-image: url('sectionphoto1.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.section3 {
+    background-image: url('sectionphoto3.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.section4 {
+    background-image: url('sectionphoto4.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.line {
+    position: relative;
+    height: 1px;
+    width: 100%;
+    background-color: black;
+    border: none;
+    top: 0;
+}
+
+.bottom-section {
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    height: 40%;
+}
+
+.box-text {
+    position: relative;
+    font-family: 'Roboto Condensed', sans-serif;
+    color: black;
+    font-size: 25px;
+    align-items: center;
+    text-align: center;
+}
+
+.section-text-box {
+    font-family: 'Roboto Condensed', sans-serif;
+    color: black;
+    font-size: 15px;
+    font-weight: light;
+    text-align: left;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+.donation-text {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+}
+
+.main-section-different {
+    position: relative;
+    height: auto;
+    width: 100vw;
+    height: 100vh;
+    background-image: url('donatephoto.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: row;
+}
+
+.title-different {
+    font-size: 100px;
+    font-family: 'Bodoni Moda SC';
+    color: white;
+    margin-left: 10%;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0; /* Keep at the top of the viewport */
+    z-index: 1;
+    align-self: flex-start; /* Ensure it stays at the top within its flex container */
+}
+
+.section-text-different {
+    font-size: 22px;
+    color: white;
+    font-family: 'Roboto Condensed', sans-serif;
+    margin-left: 10%;
+}
+
+.donation-box {
+    position: relative;
+    height: 60%;
+    width: 30%;
+    background-color: rgb(67, 77, 88);
+    border: none;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 15%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+.step-text {
+    position: relative;
+    font-size: 22px;
+    color: white;
+    top: 5%;
+    left: 10%;
+    margin: 0;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+.donation-form {
+    position: relative;
+    height: 60%;
+    width: 100%;
+    background-color: white;
+    color: rgb(67, 77, 88);
+    border: none;
+    display: flex;
+    flex-direction: column;
+    font-family: 'Roboto Condensed', sans-serif;
+    top: 50%;
+    transform: translateY(-60%);
+}
+
+.toggle-button {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+  }
+  
+  .toggle-button input[type="radio"] {
+    display: none;
+  }
+  
+  .toggle-button label {
+    cursor: pointer;
+  }
+  
+  .toggle-button span {
+    display: inline-block;
+    width: 75px;
+    padding: 10px 0;
+    border-radius: 20px;
+    background-color: #e7e7e7;
+    text-align: center;
+  }
+  
+  .toggle-button input:checked + label span {
+    background-color: rgb(67, 77, 88);
+    color: white;
+  }
+  
+  .toggle-button div {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 150px;
+    height: 100%;
+    background-color: gray;
+    border-radius: 20px;
+    transition: left 0.3s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .amount-buttons {
+    flex: 1;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .amount-buttons button {
+    width: 75px;
+    font-size: 18px;
+    padding: 10px;
+    margin: 5px 10px;
+    background-color: rgba(255, 255, 255, 0.5);
+    color: rgb(67, 77, 88);
+    border: 1px solid #ccc;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .amount-buttons button:hover {
+    background-color: rgba(255, 255, 255, 0.9);
+  }
+  
+  .custom-amount {
+    position: relative;
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    left: 5%;
+    color: rgb(67, 77, 88);
+  }
+  
+  .custom-amount input[type="text"] {
+    width: 70%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 18px;
+    color: rgb(67, 77, 88);
+  }
+  
+  .next-button {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .next-button button {
+    width: 100px;
+    padding: 10px;
+    background-color: rgb(67, 77, 88);
+    border: none;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+  }
+  
+  .next-button button:hover {
+    background-color: #ccc;
+  }
+
+  .social-medias {
+    position: relative;
+    background-color: white;
+    height: 2vh;
+    width: 50vw;
+  }
