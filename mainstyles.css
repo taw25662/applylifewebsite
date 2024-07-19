@@ -168,12 +168,6 @@ body {
     transform: translateX(25%);
 }
 
-@media (max-width: 1002px) {
-    .bio-boxes {
-        display: none;
-    }
-}
-
 .top-row {
     display: flex;
     flex-direction: row;
@@ -459,5 +453,110 @@ body {
   
   .next-button button:hover {
     background-color: #ccc;
+  }
+
+@media (max-width: 1100px) {
+    .bio-boxes {
+        flex-direction: column;
+        top: 0;
+        margin: 0;
+        padding: 0;
+        left: 15%;
+    }
+
+    .top-row {
+        flex-direction: column;
+        left: 0;
+        margin: 0;
+        padding: 0;
+        height: auto;
+    }
+
+    .second-row {
+        left: 0;
+        flex-direction: column;
+        margin: 0;
+        padding: 0;
+        height: auto;
+    }
+
+    .section-text-box {
+        display: none;
+    }
+
+    .box {
+        height: 50vh;
+        width: 70vw;
+        min-width: unset;
+    }
+
+    .section4 {
+        background-position: 40% 70%;
+    }
+}
+
+  @media (max-width: 1100px) {
+    body {
+        overflow-x: hidden;
+    }
+
+    .first-section {
+        flex-direction: column;
+    }
+
+    .main-section {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .title {
+        z-index: 2; /* Ensure the title is above the text section */
+        margin: 0; /* Adjust margin for centered alignment */
+        text-align: center; /* Center the title */
+        width: 100vw; /* Make the title take full width */
+        background-color: white;
+    }
+
+    .text-section {
+        width: 100%; /* Make text section take full width */
+    }
+
+    .text-container {
+        position: static; /* Remove absolute positioning for smaller screens */
+        top: 0;
+        left: 0;
+        margin-top: 20px; /* Add some space below the title */
+        z-index: 1;
+    }
+}
+
+  @media (max-width: 1100px) {
+    .main-section-different {
+        flex-direction: column;
+        margin-bottom: 0;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .title-different {
+        margin: 0;
+        font-size: 10vw;;
+    }
+
+    .section-text-different {
+        display: none;
+        margin: 0;
+        font-size: 2vw;
+        align-self: auto;
+    }
+
+    .donation-box {
+        position: relative;
+        transform: translateY(-100%);
+        min-width: 316px;
+        min-height: 158px;
+        left: 0;
+        top: 60%;
+    }
   }
 
